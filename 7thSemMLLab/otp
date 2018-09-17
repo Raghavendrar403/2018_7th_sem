@@ -1,0 +1,8 @@
+SPLIT_ATTRIBUTE AT 1 is Outlook
+Overcast:Yes
+Sunny--->SPLIT_ATTRIBUTE AT 2 is Humidity
+High:No
+Normal:Yes
+Rainy--->SPLIT_ATTRIBUTE AT 2 is Wind
+False:Yes
+True:No
