@@ -4,13 +4,6 @@
 #define BLACK 2
 #define INF 99999999
 
-typedef struct gp graph_node;
-struct gp{
-	int node_num;
-	graph_node *parent_node;
-	int d;
-	int color;
-} ;
 
 char *s[5] = {"WHITE","GRAY","BLACK"};
 
@@ -37,6 +30,7 @@ void print_all(graph_node v[], int n) {
 void bfs(graph *adj_list, int n) {
 	graph_node vertex[n];	
 	int i = 0;
+	/* Initialization step */
 	for(i = 0; i<n; i++) {
 		vertex[i].node_num = adj_list[i].node_num;
 		vertex[i].color = WHITE;
@@ -71,4 +65,7 @@ void bfs(graph *adj_list, int n) {
 		}
 		u->color = BLACK;
 	}
+
+	free(queue);
+	queue = NULL;
 }
