@@ -1,0 +1,114 @@
+\documentclass{article}
+
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[margin=1.25in]{geometry}
+
+\titleformat{\section}[frame]
+{\huge}
+{}
+{0.1em}
+{\filcenter\bfseries\lowercase}
+
+\titleformat{\subsection}
+{\bfseries\Large}
+{\hspace{-.25in}$\bullet$}
+{0.4em}
+{}
+
+\titleformat{\subsubsection}[runin]
+{\bfseries}
+{}
+{0em}
+{}[:]
+
+\titlespacing{\subsubsection}
+{0em}
+{0.5em}
+{0.5em}
+
+\renewcommand{\maketitle}{
+\begin{center} 
+{\huge\bfseries
+\theauthor}
+
+raghavendrar403@gmail.com --- https://github.com/Raghavendrar403/
+
+\end{center}
+
+}
+
+
+\begin{document}
+\title{R\'esum\'e}
+\author{Raghavendr Galeppa}
+
+\maketitle
+
+\section{Technical Skills}
+
+\subsection{Work Flow}
+
+Editor: vim, Debugger: GNU Debugger(gdb), Version Control: git, OS: Arch Linux
+
+\subsection{Languages}
+
+\subsubsection{Programming}
+
+C, C++, Java
+
+\subsubsection{Markup}
+
+{\LaTeX}, HTML, CSS
+
+\subsubsection{Scripting}
+
+Python(basic), shell(basic), R(basic)
+
+\section {Projects}
+
+\subsection{Completed Projects}
+
+\subsubsection{Parallelizing Matrix Multiplication} 
+
+Parallelized Matrix Multiplication using both POSIX Threads api and OpenMP. Compared the results with sequential algorithm 
+and then documented the results. Done as a 2 man team. My part was to write the code for Pthreads part and create the documentation
+of the results. 
+\textbf{https://github.com/Raghavendrar403/multi\_programming}
+
+\subsubsection{Lexical and Syntax Analysis}
+Created a very basic Compiler with only Lexical and Syntax Analysis for a subset of Ada/CS programming language. All code written in C.
+
+\textbf{https://github.com/Raghavendrar403/compiler\_design}
+
+\subsubsection{A very basic Neural Network}
+Create a very basic Neural Network using numpy package for recognizing hand written digits. It was trained using MNIST dataset and uses Backpropogation Algorithm.
+
+\subsection{Ongoing Projects}
+\subsubsection{Semantics Analyzer with using Action symbols}
+Trying to build a Semantics Analyzer for the Compiler.
+
+\subsubsection{Decision Tree Visualization for ID3 and CART}
+Visualizing Decision Trees for both ID3 and CART Algorithm.
+
+\section{General Skills}
+\subsection{Languages}
+\subsubsection{Can Speak} 
+Kannada, Hindi, Telugu, English
+
+\subsubsection{Can Read}
+Kannada, Hindi, English
+
+\section{Education}
+\subsection{Class 10}
+Kendriya Vidyalaya CGPA: 8.0
+
+\subsection{Class 12}
+Kendriya Vidyalaya Aggregate: 75.4
+
+\subsection{B.E Computer Science}
+PESIT South Campus Expected Grad August 2019, CGPA: 6.37
+
+
+
+\end{document}
