@@ -1,5 +1,4 @@
-#include<stdio.h>
-//#include<system.h>
+#include<system.h>
 
 unsigned char *memcpy(unsigned char *dest, const unsigned char *src, int count) {	
 	unsigned int i = 0;
@@ -31,13 +30,24 @@ int strlen(const char *str) {
 	while(str[i] != '\0') {
 		i++;
 	}
-
 	return i;
 }
 
-int main() {
-	char a[] = "Hello";
-	char b[10] ;
+/* This will be used to read from IO ports to get data
+from devices such as keyboard */
+unsigned char inportb(unsigned short _port) {
+	unsigned char rv;
+	__asm__ __volatile__("inb %1, %0" : "=a" (rv) : "dN" (_port));
+	return rv;
+}
 
-	printf("%d \n",strlen(a));
+/* This will be used to write to IO ports to send bytes
+to deivces */
+void outportb (unsigned short _port, unsigned char _data) {
+	__asm__ __volatile__ ("outb %1, %0" : : "dN" (_port), "a" (_data));	
+}
+
+/* The main contains an infinite loop that does nothing */
+int main() {
+	for(;;);
 }

@@ -31,6 +31,11 @@ mboot:
 
 ; This is infinite loop
 stublet:
+	;extern _main
+	; The reason we are using '_' in front of main
+	; is because the gcc compiler will put an underscore in front
+	; of all function and variable names when it compiles
+	;call _main
 	jmp $
 
 SECTION .bss
