@@ -32,5 +32,14 @@ void move_csr(void) {
 	/* Index = y*width + x; */
 	temp = csr_y*80 + csr_x;
 
-	/* 
+	outportb(0x3D4,14);
+	outportb(0x3D5,temp >> 8);
+	outportb(0x3D4,15);
+	outportb(0x3D5, temp);
+}
+
+void cls() {
+	unsigned blank;
+	int i;
+	blank = 0x20 | (attrib << 8);
 }
